@@ -1,6 +1,7 @@
-import * as THREE from "three/build/three.module";
+import * as THREE from 'three';
+
 // global scene values
-var btn, gl, glCanvas, camera, scene, renderer;
+var btn, gl, glCanvas, camera, scene, renderer; 
 var controller, reticle;
 
 // global xr value

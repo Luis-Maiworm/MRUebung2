@@ -1,4 +1,5 @@
-import * as THREE from "three/build/three.module";
+// import * as THREE from "../../node_modules/three/build/three.module.js";
+import * as THREE from 'three';
 // global scene values
 var btn, gl, glCanvas, camera, scene, renderer, cube;
 
@@ -15,9 +16,10 @@ function loadScene() {
     
     // setup Three.js scene
     camera = new THREE.PerspectiveCamera(
-        70,
+        70, 
         window.innerWidth / window.innerHeight,
         0.01,
+        // 0.001,
         1000
     );
 
@@ -31,6 +33,7 @@ function loadScene() {
     var material = new THREE.MeshPhongMaterial({color: 0x89CFF0});
     cube = new THREE.Mesh( geometry, material );
     cube.position.y = 0.2;
+    cube.position.x = 0.1;
     scene.add( cube );
 
     // setup Three.js WebGL renderer
